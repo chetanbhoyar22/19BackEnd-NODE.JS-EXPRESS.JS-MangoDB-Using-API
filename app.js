@@ -30,12 +30,12 @@ app.use(cors());
 const categoryRoutes = require("./routes/category"); //SHOP CATEGORY
 const productRoutes = require("./routes/productRoutes"); //SHOP PRODUCT
 const userRoutes = require("./routes/userRoutes"); //SHOP USER
-const orderRoutes = require("./routes/orderRoutes"); //SHOP OEDER
+const orderRoutes = require("./routes/orderRoutes"); //SHOP ORDER
 
 app.use("/api", categoryRoutes); //SHOP CATEGORY
 app.use("/api", productRoutes); //SHOP PRODUCT
 app.use("/api", userRoutes);  //SHOP USER
-app.use("/api", orderRoutes); //SHOP OEDER
+app.use("/api", orderRoutes); //SHOP ORDER
 
 //app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
 app.listen(process.env.PORT || 3000, () => console.log(`Example app listening at http://localhost:${port}`))

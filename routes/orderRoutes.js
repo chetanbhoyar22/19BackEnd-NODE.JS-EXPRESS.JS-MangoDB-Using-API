@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 const {
-//   getOrderById,
      createOrder,
      getAllOrder,
+     getOrderbyId,
+     getOrder,
+     removeOrder,
 //   getOrderStatus,
 //   updateStatus
 } = require("../controller/orderController");
@@ -13,6 +15,11 @@ const {
 router.post("/order/create",createOrder);  //http://localhost:3100/api/order/create
 //GetAllOrder
 router.get("/user/getallorders/",getAllOrder); //http://localhost:3100/api/user/getallorders
+router.param("orderId", getOrderbyId); //param : parameter
+//Find OrderById
+ router.get("/orderbyid/:orderId", getOrder)  //http://localhost:3100/api/orderbyid/
+//Remove Order
+router.delete("/removeorderbyid/:orderId",removeOrder); //http://localhost:3100/api/removeorderbyid/
 
 
 module.exports = router;
