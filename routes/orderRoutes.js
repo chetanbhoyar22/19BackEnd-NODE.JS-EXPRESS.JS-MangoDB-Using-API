@@ -24,6 +24,4 @@ router.delete("/removeorderbyid/:orderId",removeOrder); //http://localhost:3100/
 //Update Order 
 router.put("/updateorderbyid/:orderId", updateOrder); //http://localhost:3100/api/updateorderbyid/
 
-
-
 module.exports = router;

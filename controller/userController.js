@@ -1,5 +1,5 @@
-const User = require("../model/userModel")
-const { check, validationResult } = require("express-validator")
+const User = require("../model/userModel");
+const { check, validationResult } = require("express-validator");
 // var jwt = require("jsonwebtoken");
 // var expressJwt = require("express-jwt");
 
@@ -15,7 +15,6 @@ exports.register = (req, res) =>
       });
     }
 
-  
     const user = new User(req.body);
    
     user.save((err, userData) => 
@@ -109,8 +108,7 @@ exports.register = (req, res) =>
     user.mobile = req.body.mobile;
     user.address = req.body.address;
     user.purchases = req.body.purchases;
-    
- 
+     
        user.save((err, updatedUser) => {
          if(err) {
            return res.status(400).json({

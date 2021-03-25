@@ -43,5 +43,4 @@ userSchema.methods =
     return plainpassword === this.password;
   },
 };
-
 module.exports = mongoose.model("User", userSchema);

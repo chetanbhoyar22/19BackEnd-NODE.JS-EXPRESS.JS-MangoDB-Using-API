@@ -1,4 +1,4 @@
-const Product = require("../model/productModel")
+const Product = require("../model/productModel");
 // const formidable = require("formidable");
 // const _ = require("lodash");
 // const fs = require("fs");
@@ -28,8 +28,6 @@ const Product = require("../model/productModel")
         });
       }
       }
-
-     
     res.json({product});
   });
 };
@@ -65,7 +63,6 @@ const Product = require("../model/productModel")
       }
 
       req.product = productData;  //global variable 
-
       next();
     
     });
@@ -75,7 +72,6 @@ const Product = require("../model/productModel")
   exports.getProduct = (req, res) => 
 {
     return res.json(req.product);
- 
 };
 
 //to remove product byproductId
