@@ -57,7 +57,6 @@ exports.getOrder = (req, res) =>
 
 };
 
-
 // to remove order byuserId
    exports.removeOrder = (req, res) =>
     {
@@ -96,7 +95,9 @@ exports.getOrder = (req, res) =>
            });
          }
          res.json(updatedOrder);
-       });
+     
+     
+        });
     };
 
 
