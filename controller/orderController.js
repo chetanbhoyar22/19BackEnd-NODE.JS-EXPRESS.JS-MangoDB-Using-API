@@ -76,4 +76,27 @@ exports.getOrder = (req, res) =>
  });
 };
 
+//to update order
+ exports.updateOrder = (req, res) => 
+ {
+    const order = req.order;
+    order.products = req.body.products
+    order.product = req.body.product
+    order.name = req.body.name;
+    order.count = req.body.count;
+    order.price = req.body.price;
+    order.amount = req.body.amount;
+    order.address = req.body.address;
+    order.user = req.body.user;
+
+       order.save((err, updatedOrder) => {
+         if(err) {
+           return res.status(400).json({
+             error: "Failed to update order"
+           });
+         }
+         res.json(updatedOrder);
+       });
+    };
+
 

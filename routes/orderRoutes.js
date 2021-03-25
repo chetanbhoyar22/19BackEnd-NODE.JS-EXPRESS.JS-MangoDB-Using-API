@@ -7,6 +7,7 @@ const {
      getOrderbyId,
      getOrder,
      removeOrder,
+     updateOrder,
 //   getOrderStatus,
 //   updateStatus
 } = require("../controller/orderController");
@@ -20,6 +21,9 @@ router.param("orderId", getOrderbyId); //param : parameter
  router.get("/orderbyid/:orderId", getOrder)  //http://localhost:3100/api/orderbyid/
 //Remove Order
 router.delete("/removeorderbyid/:orderId",removeOrder); //http://localhost:3100/api/removeorderbyid/
+//Update Order 
+router.put("/updateorderbyid/:orderId", updateOrder); //http://localhost:3100/api/updateorderbyid/
+
 
 
 module.exports = router;
