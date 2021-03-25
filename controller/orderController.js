@@ -1,19 +1,5 @@
 const { Order, ProductCart } = require("../model/orderModel");
 
-// exports.getOrderById = (req, res, next, id) => {
-//   Order.findById(id)
-//     .populate("products.product", "name price")
-//     .exec((err, order) => {
-//       if (err) {
-//         return res.status(400).json({
-//           error: "NO order found in DB"
-//         });
-//       }
-//       req.order = order;
-//       next();
-//     });
-// };
-
 exports.createOrder = (req, res) => 
 {
 const order = new Order(req.body);
@@ -29,5 +15,19 @@ const order = new Order(req.body);
     res.json(orderData);
   });
 
+};
+
+// to read all order
+exports.getAllOrder = (req, res) => 
+{
+  Order.find().exec((err, orderData) => 
+  {
+    if (err) {
+      return res.status(400).json({
+        error: "No order found"
+      });
+    }
+    res.json(orderData);
+  });
 };
 
