@@ -18,11 +18,11 @@ router.post("/registeruser",    //http://localhost:3100/api/registeruser
 router.get("/user/getallusers/",getAllUser); //http://localhost:3100/api/user/getallusers
 router.param("userId", getUserbyId); //param : parameter
 //Find UserById
-router.get("/userbyid/:userId", getUser)  //http://localhost:3100/api/userbyid/604134cf8a203e171095b555
+router.get("/userbyid/:userId", getUser)  //http://localhost:3100/api/userbyid/
 //Remove User
-router.delete("/removeuserbyid/:userId",removeUser); //http://localhost:3100/api/removeuserbyid/604134cf8a203e171095b555
+router.delete("/removeuserbyid/:userId",removeUser); //http://localhost:3100/api/removeuserbyid/
 //Update User 
-router.put("/updateuserbyid/:userId", updateUser); //http://localhost:3100/api/updateuserbyid/60525582c4ccdf47bc003749
+router.put("/updateuserbyid/:userId", updateUser); //http://localhost:3100/api/updateuserbyid/
 //Login User
 router.post("/login",         //http://localhost:3100/api/login
   [
