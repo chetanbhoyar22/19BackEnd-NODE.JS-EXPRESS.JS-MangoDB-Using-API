@@ -15,7 +15,7 @@ const {
 //Create Order
 router.post("/order/create",createOrder);  //http://localhost:3100/api/order/create
 //GetAllOrder
-router.get("/user/getallorders/",getAllOrder); //http://localhost:3100/api/user/getallorders
+router.get("/order/getallorders/",getAllOrder); //http://localhost:3100/api/order/getallorders
 router.param("orderId", getOrderbyId); //param : parameter
 //Find OrderById
  router.get("/orderbyid/:orderId", getOrder)  //http://localhost:3100/api/orderbyid/
