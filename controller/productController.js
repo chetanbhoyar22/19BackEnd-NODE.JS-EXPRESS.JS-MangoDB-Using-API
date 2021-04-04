@@ -7,6 +7,7 @@ const Product = require("../model/productModel");
   exports.createProduct = (req, res) => 
   {
     const product = new Product(req.body);
+    product.photo = req.file.path; 
  
   product.save((err, product) => 
   {
@@ -23,7 +24,7 @@ const Product = require("../model/productModel");
       {
         return res.status(400).json({
           error: "Not able to save product",
-          messgae : err
+          message : err
          
         });
       }
